@@ -86,9 +86,7 @@ def all_supplies_in_holidays(holiday_hash)
       if kees.include?("_")
         kees = kees.tr("_"," ") 
         kees = kees.split
-        kees = kees.collect{|x| x.capitalize}.join(" ")
-        
-        puts "  #{kees}: #{val.join(", ")}"
+        puts "  #{kees.collect{|x| x.capitalize}.join(" ")}: #{val.join(", ")}"
       else
         puts "  #{kees.capitalize}: #{val.join(", ")}"
       end 
